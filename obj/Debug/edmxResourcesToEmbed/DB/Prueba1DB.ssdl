@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProyectoBibliotecaBetaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Administradores">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="PasswordHash" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Autores">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Nacionalidad" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistorialPrestamos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="LibroID" Type="int" Nullable="false" />
+    <Property Name="FechaPrestamo" Type="date" Nullable="false" />
+    <Property Name="FechaEntrega" Type="date" />
+  </EntityType>
+  <EntityType Name="Libros">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="AutorID" Type="int" Nullable="false" />
+    <Property Name="CategoriaID" Type="int" Nullable="false" />
+    <Property Name="Genero" Type="varchar" MaxLength="100" />
+    <Property Name="Edicion" Type="varchar" MaxLength="50" />
+    <Property Name="Stock" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Multas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="PrestamoID" Type="int" Nullable="false" />
+    <Property Name="Monto" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Prestamos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="LibroID" Type="int" Nullable="false" />
+    <Property Name="FechaPrestamo" Type="date" Nullable="false" />
+    <Property Name="FechaCompromiso" Type="date" Nullable="false" />
+    <Property Name="FechaEntrega" Type="date" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PrestamosPendientes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrestamoID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="LibroID" Type="int" Nullable="false" />
+    <Property Name="FechaCompromiso" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitudes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="LibroID" Type="int" Nullable="false" />
+    <Property Name="FechaSolicitud" Type="date" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Rango" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FechaRegistro" Type="date" />
+    <Property Name="Password" Type="varchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ProyectoBibliotecaBeta.dbo.Vista_PrestamosActivosPorUsuario' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Vista_PrestamosActivosPorUsuario">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="PrestamoID" />
+      <PropertyRef Name="Libro" />
+      <PropertyRef Name="FechaPrestamo" />
+      <PropertyRef Name="FechaCompromiso" />
+    </Key>
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="PrestamoID" Type="int" Nullable="false" />
+    <Property Name="Libro" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="FechaPrestamo" Type="date" Nullable="false" />
+    <Property Name="FechaCompromiso" Type="date" Nullable="false" />
+    <Property Name="FechaEntrega" Type="date" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ProyectoBibliotecaBeta.dbo.Vista_PrestamosPorUsuario' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Vista_PrestamosPorUsuario">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="PrestamoID" />
+      <PropertyRef Name="Libro" />
+      <PropertyRef Name="FechaPrestamo" />
+      <PropertyRef Name="FechaCompromiso" />
+    </Key>
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="PrestamoID" Type="int" Nullable="false" />
+    <Property Name="Libro" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="FechaPrestamo" Type="date" Nullable="false" />
+    <Property Name="FechaCompromiso" Type="date" Nullable="false" />
+    <Property Name="FechaEntrega" Type="date" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__Historial__Libro__571DF1D5">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="1" />
+    <End Role="HistorialPrestamos" Type="Self.HistorialPrestamos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HistorialPrestamos">
+        <PropertyRef Name="LibroID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__Usuar__5629CD9C">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="HistorialPrestamos" Type="Self.HistorialPrestamos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HistorialPrestamos">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Libros__AutorID__44FF419A">
+    <End Role="Autores" Type="Self.Autores" Multiplicity="1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autores">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="AutorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Libros__Categori__45F365D3">
+    <End Role="Categorias" Type="Self.Categorias" Multiplicity="1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="CategoriaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Multas__Prestamo__534D60F1">
+    <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="1" />
+    <End Role="Multas" Type="Self.Multas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prestamos">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Multas">
+        <PropertyRef Name="PrestamoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Multas__UsuarioI__52593CB8">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Multas" Type="Self.Multas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Multas">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamos__Libro__4CA06362">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="1" />
+    <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Prestamos">
+        <PropertyRef Name="LibroID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamos__Libro__5EBF139D">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="1" />
+    <End Role="PrestamosPendientes" Type="Self.PrestamosPendientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PrestamosPendientes">
+        <PropertyRef Name="LibroID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamos__Prest__5CD6CB2B">
+    <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="1" />
+    <End Role="PrestamosPendientes" Type="Self.PrestamosPendientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prestamos">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PrestamosPendientes">
+        <PropertyRef Name="PrestamoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamos__Usuar__4BAC3F29">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Prestamos" Type="Self.Prestamos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Prestamos">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamos__Usuar__5DCAEF64">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="PrestamosPendientes" Type="Self.PrestamosPendientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PrestamosPendientes">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__Libro__656C112C">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="1" />
+    <End Role="Solicitudes" Type="Self.Solicitudes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Solicitudes">
+        <PropertyRef Name="LibroID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__Usuar__6477ECF3">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Solicitudes" Type="Self.Solicitudes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Solicitudes">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProyectoBibliotecaBetaModelStoreContainer">
+    <EntitySet Name="Administradores" EntityType="Self.Administradores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Autores" EntityType="Self.Autores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categorias" EntityType="Self.Categorias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistorialPrestamos" EntityType="Self.HistorialPrestamos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Libros" EntityType="Self.Libros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Multas" EntityType="Self.Multas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prestamos" EntityType="Self.Prestamos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrestamosPendientes" EntityType="Self.PrestamosPendientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Solicitudes" EntityType="Self.Solicitudes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vista_PrestamosActivosPorUsuario" EntityType="Self.Vista_PrestamosActivosPorUsuario" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vista_PrestamosActivosPorUsuario].[UsuarioID] AS [UsuarioID], 
+    [Vista_PrestamosActivosPorUsuario].[NombreUsuario] AS [NombreUsuario], 
+    [Vista_PrestamosActivosPorUsuario].[PrestamoID] AS [PrestamoID], 
+    [Vista_PrestamosActivosPorUsuario].[Libro] AS [Libro], 
+    [Vista_PrestamosActivosPorUsuario].[FechaPrestamo] AS [FechaPrestamo], 
+    [Vista_PrestamosActivosPorUsuario].[FechaCompromiso] AS [FechaCompromiso], 
+    [Vista_PrestamosActivosPorUsuario].[FechaEntrega] AS [FechaEntrega], 
+    [Vista_PrestamosActivosPorUsuario].[Estado] AS [Estado]
+    FROM [dbo].[Vista_PrestamosActivosPorUsuario] AS [Vista_PrestamosActivosPorUsuario]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vista_PrestamosPorUsuario" EntityType="Self.Vista_PrestamosPorUsuario" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vista_PrestamosPorUsuario].[UsuarioID] AS [UsuarioID], 
+    [Vista_PrestamosPorUsuario].[NombreUsuario] AS [NombreUsuario], 
+    [Vista_PrestamosPorUsuario].[PrestamoID] AS [PrestamoID], 
+    [Vista_PrestamosPorUsuario].[Libro] AS [Libro], 
+    [Vista_PrestamosPorUsuario].[FechaPrestamo] AS [FechaPrestamo], 
+    [Vista_PrestamosPorUsuario].[FechaCompromiso] AS [FechaCompromiso], 
+    [Vista_PrestamosPorUsuario].[FechaEntrega] AS [FechaEntrega], 
+    [Vista_PrestamosPorUsuario].[Estado] AS [Estado]
+    FROM [dbo].[Vista_PrestamosPorUsuario] AS [Vista_PrestamosPorUsuario]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Historial__Libro__571DF1D5" Association="Self.FK__Historial__Libro__571DF1D5">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="HistorialPrestamos" EntitySet="HistorialPrestamos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__Usuar__5629CD9C" Association="Self.FK__Historial__Usuar__5629CD9C">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="HistorialPrestamos" EntitySet="HistorialPrestamos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Libros__AutorID__44FF419A" Association="Self.FK__Libros__AutorID__44FF419A">
+      <End Role="Autores" EntitySet="Autores" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Libros__Categori__45F365D3" Association="Self.FK__Libros__Categori__45F365D3">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Multas__Prestamo__534D60F1" Association="Self.FK__Multas__Prestamo__534D60F1">
+      <End Role="Prestamos" EntitySet="Prestamos" />
+      <End Role="Multas" EntitySet="Multas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Multas__UsuarioI__52593CB8" Association="Self.FK__Multas__UsuarioI__52593CB8">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Multas" EntitySet="Multas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamos__Libro__4CA06362" Association="Self.FK__Prestamos__Libro__4CA06362">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="Prestamos" EntitySet="Prestamos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamos__Libro__5EBF139D" Association="Self.FK__Prestamos__Libro__5EBF139D">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="PrestamosPendientes" EntitySet="PrestamosPendientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamos__Prest__5CD6CB2B" Association="Self.FK__Prestamos__Prest__5CD6CB2B">
+      <End Role="Prestamos" EntitySet="Prestamos" />
+      <End Role="PrestamosPendientes" EntitySet="PrestamosPendientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamos__Usuar__4BAC3F29" Association="Self.FK__Prestamos__Usuar__4BAC3F29">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Prestamos" EntitySet="Prestamos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamos__Usuar__5DCAEF64" Association="Self.FK__Prestamos__Usuar__5DCAEF64">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="PrestamosPendientes" EntitySet="PrestamosPendientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__Libro__656C112C" Association="Self.FK__Solicitud__Libro__656C112C">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="Solicitudes" EntitySet="Solicitudes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__Usuar__6477ECF3" Association="Self.FK__Solicitud__Usuar__6477ECF3">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Solicitudes" EntitySet="Solicitudes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

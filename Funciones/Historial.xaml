@@ -1,0 +1,46 @@
+﻿<Window x:Class="proyecto_00.Funciones.Historial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyecto_00.Funciones"
+        mc:Ignorable="d"
+        Title="Historial" Height="450" Width="800">
+    <Grid Margin="24px">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="24px"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0"
+                  ItemsSource="{Binding HistorialPrestamo}"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="10*"/>
+                <DataGridTextColumn Header="UsuarioID" Binding="{Binding UsuarioID}" Width="10*"/>
+                <DataGridTextColumn Header="LibroID" Binding="{Binding LibroID}" Width="10*"/>
+                <DataGridTextColumn Header="FechadePrestamos" Binding="{Binding FechaPrestamo}" Width="10*"/>
+                <DataGridTextColumn Header="FechadeEntrega" Binding="{Binding FechaEntrega}" Width="10*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="4" 
+                Content="Cerrar" 
+                Width="100" 
+                Height="30" 
+                HorizontalAlignment="Right"
+                Margin="0,10,0,0"
+                Click="CerrarButton_Click"/>
+        <Button
+            Grid.Row="2" 
+                Content="Volver" 
+                Width="100" 
+                Height="30" 
+                HorizontalAlignment="Right"
+                Margin="0,10,128,0"
+                Click="VolverButton"/>
+    </Grid>
+
+</Window>

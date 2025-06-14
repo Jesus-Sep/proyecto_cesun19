@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="proyecto_00.Vistas.CrearCuenta"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:proyecto_00.Vistas"
+             mc:Ignorable="d"
+             Background="White"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TextBlock Text="Username or Name"/>
+        <TextBox x:Name="TxtUsername" Width="200" Height="36" Margin="0,20,0,0"
+          HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="Password" Margin="0,80,0,0"/>
+        <PasswordBox Name="Txtpassword" Width="200" Height="36" Margin="0,100,0,0"
+            HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="Password" Margin="0,80,0,0"/>
+    </Grid>
+</UserControl>

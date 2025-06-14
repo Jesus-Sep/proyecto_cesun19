@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5174c3cfb4d14acfa23f1c965cc318e5" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Administradores" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Autores" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Categorias" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.HistorialPrestamos" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Libros" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Multas" Width="1.5" PointX="10.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Prestamos" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.PrestamosPendientes" Width="1.5" PointX="13.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Solicitudes" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Usuarios" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Vista_PrestamosActivosPorUsuario" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoBibliotecaBetaModel.Vista_PrestamosPorUsuario" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Libros__AutorID__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Libros__Categori__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Historial__Libro__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Historial__Usuar__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Prestamos__Libro__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Prestamos__Libro__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Solicitud__Libro__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Multas__Prestamo__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Multas__UsuarioI__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Prestamos__Prest__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Prestamos__Usuar__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Prestamos__Usuar__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoBibliotecaBetaModel.FK__Solicitud__Usuar__6477ECF3" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
