@@ -7,13 +7,50 @@
              mc:Ignorable="d"
              Background="White"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="Username or Name"/>
-        <TextBox x:Name="TxtUsername" Width="200" Height="36" Margin="0,20,0,0"
-          HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <TextBlock Text="Password" Margin="0,80,0,0"/>
-        <PasswordBox Name="Txtpassword" Width="200" Height="36" Margin="0,100,0,0"
-            HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <TextBlock Text="Password" Margin="0,80,0,0"/>
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Sistema de Préstamos de Libros" 
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,20"/>
+
+            <TextBlock Text="Crear nueva cuenta" 
+                       FontSize="16"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,15"/>
+
+            <!-- Campos del formulario -->
+            <Label Content="Nombre completo:"/>
+            <TextBox x:Name="txtNombre" 
+                     Height="30" 
+                     Margin="0,0,0,10"/>
+
+            <Label Content="Correo electrónico:"/>
+            <TextBox x:Name="txtEmail" 
+                     Height="30" 
+                     Margin="0,0,0,10"/>
+
+            <Label Content="Contraseña:"/>
+            <PasswordBox x:Name="txtPassword" 
+                         Height="30" 
+                         Margin="0,0,0,20"/>
+
+            <!-- Botón de registro -->
+            <Button x:Name="btnRegistrar" 
+                    Content="Registrarse" 
+                    Height="35" 
+                    Background="#FF4CAF50" 
+                    Foreground="White" 
+                    FontWeight="Bold"
+                    Click="BtnRegistrar_Click"/>
+
+            <TextBlock HorizontalAlignment="Center" Margin="0,15,0,0">
+                <Hyperlink NavigateUri="LoginWindow.xaml" 
+                           RequestNavigate="Hyperlink_RequestNavigate">
+                    ¿Ya tienes cuenta? Inicia sesión
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
     </Grid>
 </UserControl>

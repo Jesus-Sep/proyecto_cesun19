@@ -36,3 +36,63 @@ C:\Users\jesus\source\repos\proyecto_00\obj\Debug\Funciones\Prestamo.baml
 C:\Users\jesus\source\repos\proyecto_00\obj\Debug\Modals\Menu_bibliotecario.baml
 C:\Users\jesus\source\repos\proyecto_00\obj\Debug\Modals\Menu_Usuario.baml
 C:\Users\jesus\source\repos\proyecto_00\obj\Debug\proyecto.B600D54A.Up2Date
+C:\Users\jesus\source\repos\proyecto_00\obj\Debug\Funciones\AgregarLibros.g.cs
+C:\Users\jesus\source\repos\proyecto_00\obj\Debug\Funciones\AgregarLibros.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\bin\Debug\proyecto_00.exe.config
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\bin\Debug\proyecto_00.exe
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\bin\Debug\proyecto_00.pdb
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\bin\Debug\EntityFramework.dll
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\bin\Debug\EntityFramework.xml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00.csproj.AssemblyReference.cache
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\Aceptar_prestamos.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\Activos.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\AgregarLibros.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\Historial.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\Prestamo.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\MainWindow.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Modals\Menu_bibliotecario.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Modals\Menu_Usuario.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Vistas\CrearCuenta.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Vistas\Inicio_Sesion.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\App.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00_Content.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00_MarkupCompile.cache
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00_MarkupCompile.lref
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\Aceptar_prestamos.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\Activos.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\AgregarLibros.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\Historial.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Funciones\Prestamo.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\MainWindow.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Modals\Menu_bibliotecario.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Modals\Menu_Usuario.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Vistas\CrearCuenta.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\Vistas\Inicio_Sesion.baml
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00.g.resources
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00.Properties.Resources.resources
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00.csproj.GenerateResource.cache
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00.csproj.CoreCompileInputs.cache
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto.B600D54A.Up2Date
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00.exe
+C:\Users\zanat\OneDrive\Documentos\proyecto_00\obj\Debug\proyecto_00.pdb
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\proyecto_00.csproj.AssemblyReference.cache
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Funciones\Aceptar_prestamos.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Funciones\Activos.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Funciones\AgregarLibros.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Funciones\Historial.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Funciones\Prestamo.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\MainWindow.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Modals\Menu_bibliotecario.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Modals\Menu_Usuario.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Vistas\CrearCuenta.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\Vistas\Inicio_Sesion.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\App.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\proyecto_00_Content.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\proyecto_00_MarkupCompile.cache
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\proyecto_00_MarkupCompile.lref
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\proyecto_00.exe
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\proyecto_00.pdb

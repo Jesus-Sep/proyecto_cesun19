@@ -6,7 +6,47 @@
         xmlns:local="clr-namespace:proyecto_00.Funciones"
         mc:Ignorable="d"
         Title="Aceptar_prestamos" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Título -->
+        <TextBlock Grid.Row="0" Text="Préstamos Pendientes de Aprobación" 
+                   FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+        <!-- Lista de préstamos pendientes -->
+        <DataGrid Grid.Row="1" x:Name="PrestamosGrid" 
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  SelectionChanged="PrestamosGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Usuario" Binding="{Binding Usuario.Nombre}" Width="150"/>
+                <DataGridTextColumn Header="Libro" Binding="{Binding Libro.Titulo}" Width="*"/>
+                <DataGridTextColumn Header="Solicitado" Binding="{Binding FechaSolicitud, StringFormat=dd/MM/yyyy}" Width="100"/>
+                <DataGridTextColumn Header="Fecha Compromiso" Binding="{Binding FechaCompromiso, StringFormat=dd/MM/yyyy}" Width="120"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding Estado}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botones de acción -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="Aceptar Préstamo" x:Name="AceptarButton" 
+                    Click="AceptarButton_Click" 
+                    Padding="10,5" Margin="0,0,10,0" 
+                    IsEnabled="False" Background="#FF4CAF50" Foreground="White"/>
+
+            <Button Content="Rechazar Préstamo" x:Name="RechazarButton" 
+                    Click="RechazarButton_Click" 
+                    Padding="10,5" Margin="0,0,10,0" 
+                    IsEnabled="False" Background="#FFf44336" Foreground="White"/>
+
+            <Button Content="Actualizar Lista" Click="ActualizarButton_Click" Padding="10,5" Margin="0,0,10,0"/>
+            <Button Content="Cerrar" Click="CerrarButton_Click" Padding="10,5"/>
+        </StackPanel>
     </Grid>
 </Window>

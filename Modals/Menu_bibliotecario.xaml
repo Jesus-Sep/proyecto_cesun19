@@ -26,10 +26,10 @@
                 <!-- Botón 4 -->
             </Grid.RowDefinitions>
 
-            <!-- Botones -->
-            <Button Grid.Row="0" Content="Aceptar prestamo" FontSize="16" Height="48" Width="200" x:Name="btn1"/>
-            <Button Grid.Row="2" Content="Imprimir" FontSize="16" Height="48" Width="200" x:Name="btn2"/>
-            <Button Grid.Row="4" Content="Agregar Libros" FontSize="16" Height="48" Width="200" x:Name="btn3"/>
+            <!-- Botones --> 
+            <Button Grid.Row="0" Content="Aceptar prestamo" FontSize="16" Height="48" Width="200" x:Name="btm1" Click="AceptarPrestamo"/>
+            <Button Grid.Row="2" Content="Imprimir" FontSize="16" Height="48" Width="200" x:Name="btnImprimir" Click="Imprimir" />
+            <Button Grid.Row="4" Content="Agregar Libros" FontSize="16" Height="48" Width="200" x:Name="AgregarLibro" Click="AgregarLibros"/>
             <Button Grid.Row="6" Content="Salir" FontSize="16" Height="48" Width="200" x:Name="btn4" Click="Salir"/>
         </Grid>
     </Grid>

@@ -103,6 +103,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Prueba1DB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DB\Repositories\LibroRepository.cs" />
+    <Compile Include="DB\Repositories\PrestamoRepository.cs" />
+    <Compile Include="DB\Repositories\Repositories.cs" />
+    <Compile Include="DB\Repositories\UsuarioRepository.cs" />
     <Compile Include="DB\Solicitudes.cs">
       <DependentUpon>Prueba1DB.tt</DependentUpon>
     </Compile>
@@ -120,6 +124,9 @@
     </Compile>
     <Compile Include="Funciones\Activos.xaml.cs">
       <DependentUpon>Activos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Funciones\AgregarLibros.xaml.cs">
+      <DependentUpon>AgregarLibros.xaml</DependentUpon>
     </Compile>
     <Compile Include="Funciones\Historial.xaml.cs">
       <DependentUpon>Historial.xaml</DependentUpon>
@@ -144,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Funciones\Activos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Funciones\AgregarLibros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

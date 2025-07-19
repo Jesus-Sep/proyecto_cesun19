@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jesus\source\repos\proyecto_00\obj\Debug\
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\obj\Debug\
 proyecto_00
 none
 false
 DEBUG;TRACE
-C:\Users\jesus\source\repos\proyecto_00\App.xaml
-9531005585
+C:\Users\jesus\Documents\CESUN\6cuatri\Desarollo empresarial de software 2\Proyecto_modificacion1\proyecto_00\App.xaml
+101260235527
 21498432759
-281823214176
-1894293461
-Funciones\Aceptar_prestamos.xaml;Funciones\Activos.xaml;Funciones\Historial.xaml;Funciones\Prestamo.xaml;MainWindow.xaml;Modals\Menu_bibliotecario.xaml;Modals\Menu_Usuario.xaml;Vistas\CrearCuenta.xaml;Vistas\Inicio_Sesion.xaml;
+33-491238085
+18215857483
+Funciones\Aceptar_prestamos.xaml;Funciones\Activos.xaml;Funciones\AgregarLibros.xaml;Funciones\Historial.xaml;Funciones\Prestamo.xaml;MainWindow.xaml;Modals\Menu_bibliotecario.xaml;Modals\Menu_Usuario.xaml;Vistas\CrearCuenta.xaml;Vistas\Inicio_Sesion.xaml;
 
-False
+True
 

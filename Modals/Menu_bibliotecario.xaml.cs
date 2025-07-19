@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_00.Funciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,5 +28,24 @@ namespace proyecto_00.Modals
         {
             Close();
         }
+        private void AceptarPrestamo(object sender, RoutedEventArgs e)
+        {
+            Aceptar_prestamos aceptar_Prestamos = new Aceptar_prestamos();
+            aceptar_Prestamos.Show();
+            Window.GetWindow(this).Close();
+        }
+
+        private void AgregarLibros(object sender, RoutedEventArgs e)
+        {
+            Prestamo prestamo = new Prestamo();
+            prestamo.Show();
+            Window.GetWindow(this).Close();
+        }
+        private void Imprimir(object sender, RoutedEventArgs e)
+        {
+            Window.GetWindow(this).Close();
+        }
+
+
     }
 }
